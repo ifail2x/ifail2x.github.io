@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The i-win shrine</title>
+<style type="text/css">
+@import url("qualcommnext/stylesheet.css");
+body,td,th {
+	font-family: "Century Gothic";
+	font-size: 18px;
+	color: #FFF;
+}
+body {
+	background-color: #000;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Century Gothic";
+}
+</style>
+</head>
+
+<body>
+<h4 align="left">Shrinelink</h4>
+<h1 align="center">Welcome to the i-win shrine!</h1>
+<p align="center">Here is your reminder to subscribe to the hit YouTuber i-win!</p>
+<button onclick="sendMessage()" align="center" >Leave your mark</button>
+<P>still trying to center this🙏</P>
+</body>
+<script>
+    function sendMessage() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1207752278912802866/LAD2S22FjRN8D93YY0xePi-WD-jubmtow30uTRUvBGoj3szIuW5gR1R56Df0Z4YuDpO-");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: "Shrinelink",
+        avatar_url: "",
+        content: "Someone has visited the i-win shrine at https://ifail2x.github.io/i-winshrine"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+</script>
+</html>
